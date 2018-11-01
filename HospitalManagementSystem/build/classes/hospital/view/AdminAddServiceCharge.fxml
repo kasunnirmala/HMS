@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="hospital.controller.AdminAddServiceChargeController">
+    <stylesheets>
+        <URL value="@/hospital/style/adminaddservicecharge.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="txtServiceDescription" labelFloat="true" layoutX="69.0" layoutY="53.0" prefHeight="29.0" prefWidth="303.0" promptText="Service Description">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRate" labelFloat="true" layoutX="69.0" layoutY="136.0" promptText="Rate">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="440.0" layoutY="140.0" onAction="#btnAddOnAction" style="-fx-background-color: #5cb85c; -fx-border-radius: 20; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

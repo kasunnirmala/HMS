@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.AppointmentPaymentController">
+    <stylesheets>
+        <URL value="@/hospital/style/appointmentpayment.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="243.0" layoutY="14.0" text="PAYMENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="24.0" layoutY="62.0" prefHeight="167.0" prefWidth="530.0">
+         <children>
+            <VBox prefHeight="167.0" prefWidth="335.0" spacing="40.0">
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+               <children>
+                  <Label text="Appointment ID">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Doctor Fee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Channeling Fee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="167.0" prefWidth="197.0" spacing="40.0">
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+               <children>
+                  <JFXTextField fx:id="txtAppointmentID" />
+                  <JFXTextField fx:id="txtDoctorFee" />
+                  <JFXTextField fx:id="txtChannelingFee" onAction="#txtChannelingFeeOnAction" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="224.0" layoutY="248.0" prefHeight="100.0" prefWidth="306.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="153.0" spacing="10.0">
+               <children>
+                  <Label text="Total Amount">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="User Amount">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Change">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="151.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="txtTotal" />
+                  <TextField fx:id="txtUserAmount" onAction="#txtUserAmountOnAction" />
+                  <TextField fx:id="txtChange" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton buttonType="RAISED" layoutX="432.0" layoutY="377.0" onAction="#btnPayOnAction" prefHeight="39.0" prefWidth="92.0" style="-fx-background-color: #5cb85c;" text="PAY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

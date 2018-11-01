@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="hospital.controller.LoginWindowController">
+    <stylesheets>
+        <URL value="@/hospital/style/loginwindow.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="83.0" layoutY="112.0" prefHeight="232.0" prefWidth="435.0" spacing="40.0">
+         <children>
+            <JFXComboBox fx:id="cmboAccount" labelFloat="true" prefHeight="31.0" prefWidth="260.0" promptText="Account Type" style="-fx-font-weight: bold; -fx-font-size: 18;" />
+            <JFXTextField fx:id="txtUsername" labelFloat="true" promptText="Username">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" labelFloat="true" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" onAction="#btnLogin" style="-fx-background-color: #5bc85c; -fx-border-color: #585; -fx-border-radius: 30; -fx-background-radius: 30;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="100.0" right="100.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="239.0" layoutY="35.0" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="550.0" layoutY="20.0" onAction="#btnCloseOnAction" style="-fx-background-color: #888;" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

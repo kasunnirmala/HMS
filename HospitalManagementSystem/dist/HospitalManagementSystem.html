@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'HospitalManagementSystem.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iSG9zcGl0YWxNYW5hZ2VtZW50U3lzdGVtLmpubHAiPg0KICA8aW5mb3JtYXRpb24+DQogICAgPHRpdGxlPkhvc3BpdGFsTWFuYWdlbWVudFN5c3RlbTwvdGl0bGU+DQogICAgPHZlbmRvcj5LYXN1bjwvdmVuZG9yPg0KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4NCiAgICA8b2ZmbGluZS1hbGxvd2VkLz4NCiAgPC9pbmZvcm1hdGlvbj4NCiAgPHJlc291cmNlcz4NCiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+DQogICAgPGphciBocmVmPSJIb3NwaXRhbE1hbmFnZW1lbnRTeXN0ZW0uamFyIiBzaXplPSIzMTEzNjQzIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcSG9zcGl0YWxNYW5hZ2VtZW50U3lzdGVtLUNvbW1vbi5qYXIiIHNpemU9IjU1Mjc0IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcY29udHJvbHNmeC04LjQwLjExLmphciIgc2l6ZT0iOTg1NDIwIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcaWpzZS1qYXNwZXItcmVwb3J0cy11dGlsLWJ5LXNiLmphciIgc2l6ZT0iOTIzMjgxOSIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpmb2VuaXguamFyIiBzaXplPSIyMzgzODM4IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogIDwvcmVzb3VyY2VzPg0KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9Ikhvc3BpdGFsTWFuYWdlbWVudFN5c3RlbSIgPg0KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4NCiAgPC9hcHBsZXQtZGVzYz4NCiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9Imhvc3BpdGFsLmNvcmUuQWRtaW4iICBuYW1lPSJIb3NwaXRhbE1hbmFnZW1lbnRTeXN0ZW0iIC8+DQogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPg0KPC9qbmxwPg0K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedhospital.core() {
+        dtjava.embed(
+            {
+                id : 'hospital.core',
+                url : 'HospitalManagementSystem.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iSG9zcGl0YWxNYW5hZ2VtZW50U3lzdGVtLmpubHAiPg0KICA8aW5mb3JtYXRpb24+DQogICAgPHRpdGxlPkhvc3BpdGFsTWFuYWdlbWVudFN5c3RlbTwvdGl0bGU+DQogICAgPHZlbmRvcj5LYXN1bjwvdmVuZG9yPg0KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4NCiAgICA8b2ZmbGluZS1hbGxvd2VkLz4NCiAgPC9pbmZvcm1hdGlvbj4NCiAgPHJlc291cmNlcz4NCiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+DQogICAgPGphciBocmVmPSJIb3NwaXRhbE1hbmFnZW1lbnRTeXN0ZW0uamFyIiBzaXplPSIzMTEzNjQzIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcSG9zcGl0YWxNYW5hZ2VtZW50U3lzdGVtLUNvbW1vbi5qYXIiIHNpemU9IjU1Mjc0IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcY29udHJvbHNmeC04LjQwLjExLmphciIgc2l6ZT0iOTg1NDIwIiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcaWpzZS1qYXNwZXItcmVwb3J0cy11dGlsLWJ5LXNiLmphciIgc2l6ZT0iOTIzMjgxOSIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGpmb2VuaXguamFyIiBzaXplPSIyMzgzODM4IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogIDwvcmVzb3VyY2VzPg0KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9Ikhvc3BpdGFsTWFuYWdlbWVudFN5c3RlbSIgPg0KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4NCiAgPC9hcHBsZXQtZGVzYz4NCiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9Imhvc3BpdGFsLmNvcmUuQWRtaW4iICBuYW1lPSJIb3NwaXRhbE1hbmFnZW1lbnRTeXN0ZW0iIC8+DQogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPg0KPC9qbmxwPg0K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedhospital.core);
+</script>
+
+</head><body>
+<h2>Test page for <b>HospitalManagementSystem</b></h2>
+  <b>Webstart:</b> <a href='HospitalManagementSystem.jnlp' onclick="return launchApplication('HospitalManagementSystem.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

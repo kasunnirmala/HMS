@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.CashierDashBoardController">
+    <stylesheets>
+        <URL value="@/hospital/style/admindashboard.css" />
+    </stylesheets>
+   <children>
+      <ToolBar layoutX="50.0" layoutY="40.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="36.0" prefWidth="1900.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="14.0" prefHeight="36.0" prefWidth="99.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1787.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="imgViewerClose" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#closeOnMouseClicked" onMouseEntered="#closeOnMouseEntered" onMouseExited="#closeOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../assets/Close_Window_96px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="imgViewerMinimize" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#minimizeOnMouseClicked" onMouseEntered="#minimizeOnMouseEntered" onMouseExited="#minimizeOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../assets/Minimize_Window_96px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="178.0" layoutY="5.0" prefHeight="36.0" prefWidth="99.0" AnchorPane.rightAnchor="14.0">
+                     <children>
+                        <ImageView fx:id="imgViewerLogout" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#logoutOnMouseClicked" onMouseEntered="#logoutOnMouseEntered" onMouseExited="#logoutOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../assets/Logout_Rounded_Left_96px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="imgViewerSettings" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#settingsOnMouseClicked" onMouseEntered="#settingsOnMouseEntered" onMouseExited="#settingsOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../assets/Settings_96px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label layoutX="753.0" layoutY="5.0" text="HOSPITAL MANAGEMENT SYSTEM">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDashBoardDate" layoutX="1497.0" layoutY="9.0" text="2018-01-04">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDashBoardTime" layoutX="1622.0" layoutY="9.0" text="5:34:30 PM">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </ToolBar>
+      <VBox layoutX="-6.0" layoutY="40.0" prefHeight="1030.0" prefWidth="336.0" style="-fx-background-color: #5b5b5b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1584.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox prefHeight="1055.0" prefWidth="336.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="93.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <VBox alignment="CENTER" prefHeight="778.0" prefWidth="336.0">
+                     <children>
+                        <Label style="-fx-underline: true;" text="DASHBOARD" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="60.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXButton fx:id="btnAppointment" buttonType="RAISED" onAction="#btnAppointmentOnAction" prefHeight="31.0" prefWidth="456.0" styleClass="dashBoardButton" stylesheets="@../style/admindashboard.css" text="Appointment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRoom" buttonType="RAISED" onAction="#btnRoomsOnAction" prefHeight="31.0" prefWidth="372.0" styleClass="dashBoardButton" stylesheets="@../style/admindashboard.css" text="Reserve Room" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBill" buttonType="RAISED" onAction="#btnBillOnAction" prefHeight="31.0" prefWidth="482.0" styleClass="dashBoardButton" stylesheets="@../style/admindashboard.css" text="Form Bill" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="showPane" layoutX="336.0" layoutY="105.0" prefHeight="1030.0" prefWidth="1584.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+   </children>
+</AnchorPane>

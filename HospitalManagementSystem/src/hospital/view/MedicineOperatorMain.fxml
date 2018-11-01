@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.MedicineOperatorMainController">
+   <stylesheets>
+      <URL value="@/hospital/style/medicaloperator.css" />
+   </stylesheets>
+   <children>
+      <VBox layoutX="456.0" layoutY="118.0" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="97.0" prefWidth="1200.0">
+               <children>
+                  <Label text="MEDICINE OPERATOR">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="96.0" prefWidth="1140.0" spacing="50.0" style="-fx-background-color: #eee; -fx-border-color: #aaa; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <JFXTextField fx:id="txtRoomNo" labelFloat="true" onAction="#txtRoomNoOnAction" promptText="Room No">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtRoomType" editable="false" labelFloat="true" promptText="Room Type">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtPatientID" editable="false" labelFloat="true" promptText="Patient ID">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtPatientName" editable="false" labelFloat="true" promptText="Patient Name">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtDateAdmit" editable="false" labelFloat="true" promptText="Date of Admit">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: #eee; -fx-border-color: #aaa; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <JFXTextField fx:id="txtTreatment" labelFloat="true" onAction="#txtTreatmentOnAction" prefHeight="35.0" prefWidth="404.0" promptText="Treatment">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtMedicine" labelFloat="true" onAction="#txtMedicineOnAction" prefHeight="35.0" prefWidth="428.0" promptText="Medicine Description">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtAmount" labelFloat="true" onAction="#txtAmountOnAction" prefHeight="35.0" prefWidth="181.0" promptText="Amount">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <TableView fx:id="tblView" prefHeight="417.0" prefWidth="1140.0">
+               <columns>
+                  <TableColumn prefWidth="380.0" text="Treatment" />
+                  <TableColumn prefWidth="423.0" text="Medicine Description" />
+                  <TableColumn prefWidth="153.0" text="Amount" />
+                  <TableColumn prefWidth="183.0" text="Date" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+      <ImageView fx:id="imgViewerLogout" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#logoutOnMouseClicked" onMouseEntered="#logoutOnMouseEntered" onMouseExited="#logoutOnMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logout_Rounded_Left_96px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

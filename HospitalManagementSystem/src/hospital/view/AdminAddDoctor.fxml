@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1000.0" style="-fx-background-color: #777;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.AdminAddDoctorController">
+   <children>
+      <AnchorPane prefHeight="970.0" prefWidth="1000.0">
+         <children>
+            <JFXButton fx:id="btnCloseAdminAddDoctor" buttonType="RAISED" layoutX="25.0" layoutY="9.0" onAction="#btnCloseAdminAddDoctorOnAction" prefHeight="31.0" prefWidth="27.0" style="-fx-background-color: #000;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblTitle" alignment="CENTER" layoutX="100.0" layoutY="1.0" prefHeight="53.0" prefWidth="1000.0" style="-fx-underline: true;" text="DOCTOR" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <HBox layoutX="669.0" layoutY="60.0" style="-fx-border-color: #fff;" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <ImageView fx:id="imgView" fitHeight="290.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <VBox layoutX="40.0" layoutY="60.0" prefHeight="393.0" prefWidth="610.0" style="-fx-border-color: #fff;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <JFXComboBox fx:id="cmbSection" labelFloat="true" prefHeight="39.0" prefWidth="173.0" promptText="SECTION" style="-fx-font-size: 18; -fx-font-weight: bold;" unFocusColor="WHITE">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <HBox prefHeight="0.0" prefWidth="667.0">
+                     <children>
+                        <JFXTextField fx:id="txtFirstName" labelFloat="true" promptText="First Name" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="33.5" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtMiddleName" labelFloat="true" promptText="Middle Name" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="33.5" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtLastName" labelFloat="true" promptText="Last Name" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="667.0">
+                     <children>
+                        <Label text="Gender:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXRadioButton fx:id="radioMale" style="-fx-unselected-color: #4059a9;" text="Male" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="radioFemale" text="Female" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXRadioButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextField fx:id="txtAddress" labelFloat="true" prefHeight="29.0" prefWidth="610.0" promptText="Address" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="txtDOB" defaultColor="#4059a9" editable="false" promptText="Date Of Birth" style="-fx-text-fill: #fff; -fx-font-weight: bold; -fx-font-size: 18;">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="610.0">
+                     <children>
+                        <JFXComboBox fx:id="cmboSpecialization" accessibleRole="CHECK_BOX" labelFloat="true" prefHeight="31.0" prefWidth="240.0" promptText="Specialization" style="-fx-text-fill: #000; -fx-font-weight: bold; -fx-font-size: 18;" unFocusColor="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton onAction="#btnAddSpecializationOnAction" style="-fx-background-color: #428bca; -fx-background-radius: 50; -fx-border-radius: 50;" text="ADD">
+                           <HBox.margin>
+                              <Insets left="8.0" right="50.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXTextField fx:id="txtSLMCNo" labelFloat="true" prefHeight="29.0" prefWidth="240.0" promptText="SLMC Register Number" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="667.0">
+                     <children>
+                        <JFXTextField fx:id="txtMobileNo" labelFloat="true" prefHeight="29.0" prefWidth="240.0" promptText="Mobile Number" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="130.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtPhoneNumber" labelFloat="true" prefHeight="29.0" prefWidth="240.0" promptText="Phone Number" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextField fx:id="txtEmail" labelFloat="true" prefHeight="29.0" prefWidth="584.0" promptText="Email" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <JFXButton fx:id="btnOpenImage" buttonType="RAISED" layoutX="726.0" layoutY="375.0" onAction="#btnOpenImageOnAction" style="-fx-background-color: #5bc0de;" text="Open Image" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <VBox layoutX="40.0" layoutY="624.0" prefHeight="272.0" prefWidth="920.0" style="-fx-border-color: #fff;" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <children>
+                  <Label style="-fx-underline: true;" text="Visiting Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="69.0" prefWidth="898.0" spacing="100.0">
+                     <children>
+                        <JFXTextField fx:id="txtVisitingFee" labelFloat="true" promptText="Visiting Fee" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNoOfAppointments" labelFloat="true" promptText="No of Appointment" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="135.0" prefWidth="898.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="6.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="MONDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <CheckBox fx:id="checkMonday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeMonday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeMonday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="TUESDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkTuesday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeTuesday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeTuesday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="WEDNESDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkWednesday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeWednesday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeWednesday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="THURSDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkThursday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeThursday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeThursday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="FRIDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkFriday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeFriday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeFriday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="SATURDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkSaturaday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeSaturday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeSaturday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="118.0" style="-fx-background-color: #555;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="118.0">
+                                 <children>
+                                    <Label text="SUNDAY" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="checkSunday" mnemonicParsing="false" prefHeight="29.0" prefWidth="30.0" />
+                                    <JFXTimePicker fx:id="startTimeSunday" promptText="Start Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                    <JFXTimePicker fx:id="endTimeSunday" promptText="End Time" style="-fx-text-fill: #fff; -fx-font-weight: bold;" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="6.0" top="5.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <JFXButton fx:id="btnAction" buttonType="RAISED" layoutX="731.0" layoutY="902.0" onAction="#btnActionOnAction" prefHeight="48.0" prefWidth="229.0" style="-fx-background-color: #5cb85c;" text="SAVE" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

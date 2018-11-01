@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorView" prefHeight="860.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.DoctorPrescriptionNewController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="543.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="980.0">
+               <children>
+                  <Label text="Prescription ID : ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPrescriptionID" />
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="150.0">
+               <children>
+                  <AnchorPane prefHeight="146.0" prefWidth="420.0" style="-fx-border-color: #ccc; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <children>
+                        <VBox layoutX="2.0" layoutY="2.0" prefHeight="127.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label style="-fx-underline: true;" text="PATIENT DETAILS">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtPatientID" labelFloat="true" onAction="#txtPatientIDOnAction" promptText="Patient ID">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtPatientName" alignment="CENTER" disable="true" editable="false" labelFloat="true" prefHeight="28.0" prefWidth="205.0" promptText="Name">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtPatientGender" alignment="CENTER" disable="true" editable="false" labelFloat="true" prefHeight="28.0" prefWidth="98.0" promptText="Gender">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtPatientAge" alignment="CENTER" disable="true" editable="false" labelFloat="true" prefHeight="28.0" prefWidth="100.0" promptText="Age">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="146.0" prefWidth="420.0" style="-fx-border-color: #ccc; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <children>
+                        <VBox layoutX="2.0" layoutY="2.0" prefHeight="127.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label style="-fx-underline: true;" text="DOCTOR DETAILS">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtDocSLMC" labelFloat="true" onAction="#txtDocSLMCOnAction" promptText="Doctor SLMC No">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDoctorName" alignment="CENTER" disable="true" editable="false" labelFloat="true" prefHeight="28.0" prefWidth="205.0" promptText="Name">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtSpeciality" alignment="CENTER" disable="true" editable="false" labelFloat="true" prefHeight="28.0" prefWidth="143.0" promptText="Speciality">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="679.0" prefWidth="980.0" style="-fx-border-color: #ccc; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <VBox layoutX="335.0" layoutY="15.0" prefHeight="217.0" prefWidth="980.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="600.0">
+                           <children>
+                              <Label style="-fx-underline: true;" text="PRESCRIPTION">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblDateTime" alignment="CENTER" prefHeight="21.0" prefWidth="210.0" text="Label">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="addHBox" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="txtMedicineName" onAction="#txtMedicineOnAction" prefHeight="31.0" prefWidth="635.0" promptText="Medicine Name" />
+                              <TextField fx:id="txtDose" onAction="#txtDoseOnAction" promptText="Dose" />
+                              <ComboBox fx:id="cmbFrequncy" onKeyPressed="#cmbFrequencyOnKeyPressed" prefWidth="150.0" />
+                              <TextField fx:id="txtDays" layoutX="384.0" layoutY="10.0" onAction="#txtDaysOnAction" promptText="Days" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tblView" prefHeight="470.0" prefWidth="948.0">
+                           <columns>
+                              <TableColumn prefWidth="587.0" text="Medicine Name" />
+                              <TableColumn prefWidth="156.0" text="Dose" />
+                              <TableColumn prefWidth="104.0" text="BD / TD" />
+                              <TableColumn prefWidth="100.0" text="Days" />
+                           </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnSave" buttonType="RAISED" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #5cb85c;" text="SAVE" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="850.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <ImageView fx:id="imgViewerLogout" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#logoutOnMouseClicked" onMouseEntered="#logoutOnMouseEntered" onMouseExited="#logoutOnMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logout_Rounded_Left_96px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

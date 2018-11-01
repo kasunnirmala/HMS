@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1030.0" prefWidth="1584.0" style="-fx-background-color: #fff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.AdminPatientsController">
+   <stylesheets>
+      <URL value="@/hospital/style/admindoctors.css" />
+   </stylesheets>
+   <children>
+      <TableView fx:id="tblView" layoutX="60.0" layoutY="214.0" prefHeight="748.0" prefWidth="1475.0" AnchorPane.leftAnchor="60.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Patient ID" />
+            <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Gender" />
+            <TableColumn prefWidth="75.0" text="Age" />
+            <TableColumn prefWidth="75.0" text="Channeling Details" />
+            <TableColumn prefWidth="75.0" text="Admit Details" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXTextField fx:id="txtSearchByName" labelFloat="true" layoutX="68.0" layoutY="143.0" prefHeight="29.0" prefWidth="497.0" promptText="FILTER BY NAME" AnchorPane.leftAnchor="60.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="679.0" layoutY="18.0" text="PATIENTS" textFill="#a16a1c">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.combo-box-base{
+    -fx-alignment: CENTER;
+}
+.combo-box{
+    -fx-alignment: CENTER;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="hospital.controller.AdminOtherChargesController">
+    <stylesheets>
+        <URL value="@/hospital/style/adminothercharges.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="1030.0" prefWidth="1584.0" style="-fx-background-color: #fff;" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@/hospital/style/admindoctors.css" />
+          </stylesheets>
+         <children>
+            <Label layoutX="614.0" layoutY="38.0" text="OTHER CHARGES" textFill="#a16a1c">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vboxServices" layoutX="414.0" layoutY="165.0" prefHeight="733.0" prefWidth="749.0" />
+            <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="1473.0" layoutY="104.0" onMouseClicked="#addMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/add.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1087.0" layoutY="943.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #5cb85c;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

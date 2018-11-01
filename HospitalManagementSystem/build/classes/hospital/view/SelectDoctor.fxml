@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1030.0" prefWidth="1584.0" style="-fx-background-color: #fff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.controller.SelectDoctorController">
+    <stylesheets>
+        <URL value="@/hospital/style/admindoctors.css" />
+    </stylesheets>
+   <children>
+      <JFXDrawer fx:id="drawerAddDoctor" defaultDrawerSize="1000.0" direction="RIGHT" layoutX="25.0" layoutY="73.0" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+      <TableView fx:id="tblView" layoutX="60.0" layoutY="214.0" prefHeight="748.0" prefWidth="1475.0" AnchorPane.leftAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="tblColumnSection" prefWidth="75.0" text="Section" />
+          <TableColumn fx:id="tblColumnFirstName" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="tblColumnLastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="tblColumnSpecialization" prefWidth="75.0" text="Specialization" />
+            <TableColumn fx:id="tblColumnslmc" prefWidth="75.0" text="SLMC" />
+            <TableColumn fx:id="tblColumnVisitingFee" prefWidth="75.0" text="Visiting Fee" />
+            <TableColumn fx:id="tblColumnAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="tblColumnGender" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="tblColumnMobileNumber" prefWidth="75.0" text="Mobile Number" />
+            <TableColumn fx:id="tblColumnPhoneNumber" prefWidth="75.0" text="Phone Number" />
+            <TableColumn fx:id="tblColumnEmail" prefWidth="75.0" text="Email" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXComboBox fx:id="cmboFilter" layoutX="70.0" layoutY="142.0" prefHeight="31.0" prefWidth="189.0" promptText="FILTER" style="-fx-font-size: 18; -fx-font-weight: bold;" AnchorPane.leftAnchor="60.0" />
+      <JFXTextField fx:id="txtSearchByName" layoutX="300.0" layoutY="143.0" prefHeight="29.0" prefWidth="265.0" />
+      <JFXComboBox fx:id="cmboFilterValues" editable="true" layoutX="300.0" layoutY="143.0" prefHeight="29.0" prefWidth="265.0" />
+      <Label layoutX="605.0" layoutY="24.0" text="SELECT DOCTORS" textFill="#a16a1c">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSelect" buttonType="RAISED" layoutX="1433.0" layoutY="135.0" onAction="#btnSelectOnAction" prefHeight="38.0" prefWidth="102.0" style="-fx-background-color: #5bc0de; -fx-background-radius: 50;" text="SELECT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
